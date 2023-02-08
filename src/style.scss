@@ -1,0 +1,932 @@
+$default-color: #65C6BB;
+$default-bgcolor: #F5F5F5;
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: $default-bgcolor;
+    margin: 0;
+}
+.header{
+    display: flex;
+    height: 66px;
+    background-color: $default-color;
+}
+.wrapper{
+    width: 1010px;
+    margin: 0 auto;
+    display: flex;
+}
+.container{
+    max-width: 1010px;
+    margin: 0 auto;
+}
+.logo{
+    margin-top: 6px;
+    width: 130px;
+    height: 54px;
+}
+.nav{
+    display: flex;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    min-width: 536px;
+    height: 41px;
+    justify-content: space-between;
+    margin-top: 13px;
+    margin-left: auto;
+    margin-right: 0;
+}
+.nav__link{
+    text-decoration: none;
+    color: white;
+    margin: 0;
+    margin-top: 11px;
+}
+.nav__link-button{
+    width: 197px;
+    height: 36px;
+    background-color: #BCFFF7;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    color: $default-color;
+    border-radius: 50px;
+    text-align: center;
+    padding-top: 9px;
+    text-decoration: none;
+}
+.line{
+    width: 2px;
+    height: 41px;
+    background-color: #BCFFF7;
+    border: none;
+    margin: 0;
+}
+.top__text{
+    margin: 0;
+    font-family: 'Jost', sans-serif;
+    font-weight: 500;
+    font-size: 36px;
+    color: #000;
+    text-align: center;
+    margin-top: 47px;
+}
+.location{
+    margin:35px 0 0 0;
+    width: 386px;
+    height: 40px;
+    background: url(../public/img/near_me.svg) 9px 6px no-repeat $default-bgcolor;
+    border: 1px solid #B5B5B5;
+    font-family: 'Jost', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    color: #000;
+    padding-left: 39px;
+    padding-top: 15px;
+}
+.datearea{
+    height: 40px;
+    margin-top: 20px;
+}
+.date{
+    width: 100px;
+    height: 40px;
+    margin: 0;
+    font-family: 'Jost', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    color: $default-color;
+    border-left: 1px solid #B5B5B5;
+    border-top: 1px solid #B5B5B5;
+    border-bottom: 1px solid #B5B5B5;
+    border-right: none;
+    outline: none;
+    padding-top: 10px;
+    background: url(../public/img/datetake.svg) 6px 4px no-repeat #F5F5F5;
+}
+.time{
+    width: 93px;
+    height: 40px; 
+    margin: 0;
+    font-family: 'Jost', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    color: $default-color;
+    border-right: 1px solid #B5B5B5;
+    border-top: 1px solid #B5B5B5;
+    border-bottom: 1px solid #B5B5B5;
+    border-left: none;
+    outline: none;
+    padding-top: 10px;
+    background: $default-bgcolor;
+}
+.dateout{
+    width: 100px;
+    height: 40px;
+    margin: 0;
+    font-family: 'Jost', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    color: $default-color;
+    border-left: none;
+    border-top: 1px solid #B5B5B5;
+    border-bottom: 1px solid #B5B5B5;
+    border-right: none;
+    outline: none;
+    padding-top: 10px;
+    background: url(../public/img/dateout.svg) 6px 4px no-repeat $default-bgcolor;
+}
+.top__text-type{
+    font-family: 'Jost', sans-serif;
+    font-weight: 500;
+    font-size: 36px;
+    color: #000;
+    text-align: left;
+    margin-top: 20px;
+}
+.auto{
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+.auto__type{
+    width: 175px;
+    height: 111px;
+    background-color: $default-bgcolor;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.25);
+}
+.auto__type-input{
+    display: none;
+}
+.auto__type-input + label{
+    background: url(../public/img/done_not_check.svg) 8px 8px no-repeat;
+    position: absolute;
+    margin: 0;
+    width: 175px;
+    height: 111px;
+    z-index: 3;
+    cursor: pointer;
+}
+.auto__type-input:checked + label{
+    background: url(../public/img/done_check.svg) 8px 8px no-repeat;
+}
+.auto__type-text{
+    width: 175px;
+    position: absolute;
+    font-family: 'Jost', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    color: #000;
+    margin-top: 9px;
+    padding-right: 8px;
+    text-align: right;
+}
+.auto__type-done{
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    margin: 8px 0 0 8px;
+}
+.auto__car-img{
+    width: 139px;
+    height: 92px;
+    position: absolute;
+    margin: 9px 0 0 18px;
+}
+.auto__price{
+    padding-top: 4px;
+    width: 88px;
+    height: 24px;
+    background-color: $default-color;
+    position: absolute;
+    margin: 87px 0 0 87px;
+    text-align: center;
+    font-family: 'Jost', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    color: #F5F5F5;
+}
+.auto__textarea{
+    margin-top: 20px;
+    padding: 13px 0 0 13px;
+    width: 386px;
+    height: 89px;
+    border: 1px solid#B5B5B5;
+    border-radius: 5px;
+    background-color: $default-bgcolor;
+    font-family: 'Jost', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    resize: none;
+    outline: none;
+}
+.auto__tel{
+    display: flex;
+    margin-top: 20px;
+}
+.select__tel{
+    background-color: $default-bgcolor;
+    width: 78px;
+    height: 40px;
+    font-family: 'Jost', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    border: 1px solid #B5B5B5;
+    border-right: none;
+    padding-left: 11px;
+}
+.auto__tel-input{
+    background-color: $default-bgcolor;
+    width: 308px;
+    height: 40px;
+    font-family: 'Jost', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    border: 1px solid #B5B5B5;
+    border-left: none;
+    outline: none;
+}
+.auto__search-btn{
+    margin-top: 20px;
+    width: 197px;
+    height: 36px;
+    background: url(../public/img/search.svg) 61px 10px no-repeat $default-color;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    color: #BCFFF7;
+    border: none;
+    border-radius: 5px;
+    padding-left: 10px;
+    cursor: pointer;
+    transition: .3s;
+}
+.auto__search-btn:hover{
+    background-color: #54b9ae;
+}
+.offer{
+    height: 560px;
+    margin-top: 51px;
+    background: url(../public/img/bgcar.svg) no-repeat;
+    background-size:cover;
+}
+.offer__top-text{
+    
+    font-family: 'Jost', sans-serif;
+    font-weight: 500;
+    font-size: 36px;
+    padding-top: 36px;
+    text-align: center;
+    color: white;
+}
+.offer__paragraph-text{
+    font-family: 'Jost', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    text-align: center;
+    color: white;
+}
+.xcars__span{
+    display: inline-block;
+    width: 85px;
+    height: 35px;
+    background-color: #BCFFF7;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Jost', sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    color: $default-color;
+}
+.offer__items{
+    display: flex;
+    justify-content: space-between;
+}
+.offer__items-inner{
+    position: relative;
+    margin-top: 77px;
+}
+.offer__items-top{
+    display: flex;
+}
+.offer__img{
+    width: 47px;
+    height: 47px;
+}
+.offer__inner-toptext{
+    min-width: auto;
+    padding-left: 6px;
+    padding-right: 6px;
+    height: 35px;
+    background-color: #BCFFF7;
+    color: $default-color;
+    border-radius: 5px;
+    font-family: 'Jost', sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    text-align: center;
+    margin-left: 15px;
+}
+.offer__inner-textbottom{
+    width: 221px;
+    margin: 0;
+    font-family: 'Jost', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: white;
+    margin-left: 62px;
+    margin-top: 0;
+    text-align: left;
+}
+.offer__inner-btn{
+    top: 0;
+    position: absolute;
+    width: auto;
+    padding-left: 19px;
+    padding-right: 19px;
+    height: 38px;
+    font-family: 'Jost', sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    margin-left: 62px;
+    margin-top: 137px;
+    background-color: #fff;
+    border: none;
+    color: $default-color;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: .3s;
+}
+.offer__inner-btn:hover{
+    background-color: #BCFFF7;
+    color: $default-color;
+}
+.catalog{
+    margin-top: 23px;
+}
+.catalog__top-text{
+    margin: 0;
+    font-family: 'Jost', sans-serif;
+    font-weight: 500;
+    font-size: 36px;
+    color: black;
+    text-align: center;
+}
+.catalog__items{
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+}
+.catalog__items::before{
+    content: "";
+    width: 49.2%;
+    order: 99999;
+}
+.catalog__items::after{
+    width: 49.2%;
+    content: "";
+}
+.catalog__items-inner{
+    margin-top: 40px;
+    text-decoration: none;
+    width: 223px;
+    height: 223px;
+    background-color: $default-bgcolor;
+    border: 1px solid #B5B5B5;
+}
+.catalog__items-img{
+    width: 221px;
+    height: 145px;
+}
+.catalog__car-text{
+    margin: 2px 0 0 7px;
+    font-family: 'Jost', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    color: black;
+}
+.catalog__location{
+    display: flex;
+    margin: 0 0 0 7px;
+}
+.catalog__location-img{
+    width: 15px;
+    height: 15px;
+    margin-top: 2px;
+}
+.catalog__location-text{
+    margin: 0 0 0 2px;
+    font-family: 'Jost', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    color: black;
+}
+.catalog__price{
+    margin: 0;
+    margin-top: 4px;
+    margin-left: 7px;
+    display: flex;
+    font-family: 'Jost', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #000;
+}
+.catalog__price-text{
+    margin: 0;
+    font-size: 16px;
+    padding-right: 4px;
+    color: $default-color;
+}
+.space{
+    height: 300px;
+}
+.catalog__button{
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 40px;
+    align-items: center;
+    display: flex;
+    width: 162px;
+    height: 36px;
+    background-color: $default-color;
+    color: white;
+    font-family: 'Jost', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    border: none;
+    border-radius: 26px;
+    cursor: pointer;
+    transition: .3s;
+}
+.catalog__button:hover{
+    background-color: #54b9ae;
+}
+.footer{
+    margin-top: 114px;
+    background: url(../public/img/footerbg.svg) no-repeat;
+    background-size: cover;
+    height: 204px;
+}
+ul {
+    padding-left: 0;
+}
+.footer__item{
+    list-style-type: none;
+    margin: 0;
+    margin-top: 45px;
+}
+.footer__item-inner + .footer__item-inner{
+    margin-top: 9px;
+}
+.footer__item-text{
+    width: 160px;
+    color: #BCFFF7;
+    font-family: 'Jost', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+.footer__top-text{
+    margin: 0;
+    color: white;
+    font-family: 'Jost', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+}
+.footer__inner{
+    display: flex;
+    justify-content: space-between;
+}
+.footer__item-social{
+    display: flex;
+    justify-content: space-between;
+}
+.signup__popup{
+    position: absolute;
+    width: 475px;
+    min-height: 290px;
+    padding-bottom: 20px;
+    background-color: #F5F5F5;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.popup{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 3;
+    top: 0;
+    left: 0;
+    display: none;
+}
+.birthday{
+    position: fixed;
+    width: 414px;
+    height: 180px;
+    padding-bottom: 20px;
+    background-color: #F5F5F5;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.birthday__inner{
+    display: flex;
+    width: 349px;
+    justify-content: space-between;
+    margin-top: 29px;
+    margin-left: 28px;
+}
+.birthday__text{
+    width: 284px;
+    margin: 0;
+    color: #65C6BB;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+}
+.popup__closed{
+    display: flex;
+    margin-top: 12px;
+    margin-left: 443px;
+}
+.popup__closed-img{
+    width: 15px;
+    height: 15px;
+}
+.signup__text{
+    margin: 0;
+    color: black;
+    font-family: 'Jost', sans-serif;
+    font-weight: 400;
+    font-size: 32px;
+    text-align: center;
+}
+.signup__input{
+    display: flex;
+    padding-top: 15px;
+    width: 374px;
+    margin: 0 auto;
+}
+.signup__icon-input{
+    width: 34px;
+    height: 42px;
+    border: 1px solid #B5B5B5;
+    background-color: #F5F5F5;
+}
+.signup__icon-img{
+    width: 16px;
+    height: 16px;
+    margin-left: 8px;
+    margin-top: 12px;
+}
+.signup__input-inner{
+    width: 340px;
+    height: 42px;
+    border: 1px solid #B5B5B5;
+    border-left: none;
+    background-color: #F5F5F5;
+    outline: none;
+    color: black;
+    font-family: 'Jost', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    padding-left: 6px;
+}
+.signup__input-inner[type="date"]::-webkit-calendar-picker-indicator{
+    filter: invert(1);
+}
+
+.signup__btn{
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    min-width: 96px;
+    height: 36px;
+    padding-left: 30px;
+    padding-right: 20px;
+    margin-top: 28px;
+    background: url(../public/img/done.svg) 12px 12px no-repeat $default-color;
+    border: none;
+    border-radius: 5px;
+    color: #BCFFF7;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    cursor: pointer;
+    transition: .3s;
+}
+.signup__btn:hover{
+    background: url(../public/img/done.svg) 12px 12px no-repeat #54b9ae;
+}
+.signup__error{
+    color: rgb(255, 109, 109);
+    font-family: 'Jost', sans-serif;
+    font-weight: 400;
+    text-align: center;
+    font-size: 14px;
+}
+.notification{
+    position: fixed;
+    width: 359px;
+    height: 61px;
+    background-color: $default-bgcolor;
+    border-radius: 5px;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: $default-color;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    text-align: center;
+    font-size: 15px;
+    padding-top: 22px;
+    display: none;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
+}
+.signin__link{
+    display: flex;
+    margin: 0 auto;
+    width: 291px;
+    color: black;
+    margin-top: 20px;
+}
+.logout__img{
+    width: 24px;
+    height: 24px;
+    margin-top: 8px;
+}
+.nav__link-account{
+    text-decoration: none;
+    color: white;
+}
+.login__text{
+    padding-top: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.profile{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 45px;
+}
+.profile__inner{
+    width: 448px;
+    height: 257px;
+    background-color: $default-bgcolor;
+    border-radius: 25px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+.profile__line{
+    border: 1px solid $default-color;
+    margin: 0;
+    margin-top: 25px;
+}
+.profile__information{
+    display: flex;
+    margin-top: 22px;
+    margin-left: 25px;
+}
+.profile__information-inner{
+    display: block;
+    margin-left: 53px;
+    margin-top: 18px;
+}
+.profile__name-text{
+    color: black;
+    font-family: 'Jost', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    margin: 0;
+}
+.lastname{
+    color: $default-color;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.profile__phone-img{
+    margin-top: 5px;
+}
+.profile__phone{
+    display: flex;
+}
+.profile__id-text{
+    display: block;
+    width: 117px;
+    color: #B5B5B5;
+    font-family: 'Jost', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    margin: 0;
+    margin-top: -5px;
+    width:100%;
+    text-align:right;
+    padding-right: 25px;
+}
+.activecar{
+    width: 550px;
+    height: 257px;
+    background: $default-bgcolor;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 25px;
+}
+.activecar__text{
+    margin-left: 201px;
+    display: block;
+    position: absolute;
+    color: #000;
+    font-family: 'Jost', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    text-align: center;
+}
+.activecar__inner{
+    display: flex;
+    margin-top: 54px;
+    margin-left: 37px;
+}
+.activecar__inner-img{
+    width: 145px;
+    height: 95px;
+}
+.activecar__information{
+    margin-left: 14px;
+}
+.activecar__information-text{
+    margin: 0;
+    color: #000;
+    font-family: 'Jost', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+}
+.activecar__information-time{
+    margin: 0;
+    color: $default-color;
+    font-family: 'Jost', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+}
+.history{
+    margin-top: 30px;
+}
+.history__top-text{
+    margin: 0;
+    margin-top: 50px;
+    color: black;
+    text-align: center;
+    font-family: 'Jost', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+}
+.history__inner{
+    display: flex;
+    margin-top: 15px;
+    width: 100%;
+    height: 126px;
+    background: $default-bgcolor;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 25px;
+}
+.history__status{
+    display: flex;
+    margin: 0;
+    color: black;
+    text-align: center;
+    font-family: 'Jost', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    margin-left: 360px;
+}
+.history__status-text{
+    color: $default-color;
+}
+.car__order-inner{
+    display: flex;
+}
+.car__order{
+    margin-top: 45px;
+}
+.car__order-img{
+    width: 650px;
+    height: 426px;
+}
+.car__order-information{
+    margin-left: 18px;
+    width: 332px;
+    //height: 414px;
+    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    background: $default-bgcolor;
+    font-family: 'Jost', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+.order__price{
+    display:inline-block;
+    min-width: 62px;
+    height: 21px;
+    background-color: $default-color;
+    color: white;
+    border-radius: 4px;
+    text-align: center;
+    font-family: 'Jost', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-top: 12px;
+    margin-left: 14px;
+    margin-right: 5px;
+}
+.order__input{
+    display: flex;
+    width: 303px;
+    margin: 0 auto;
+    margin-top: 13px;
+}
+.count__info{
+    display: flex;
+    justify-content: space-between;
+    width: 303px;
+    margin: 0 auto;
+    margin-top: 13px;
+}
+.order__button-inner{
+    width: 276px;
+    height: 36px;
+    margin: 0 auto;
+    margin-top: 22px;
+}
+.order__button-bg{
+    position: absolute;
+    width: 276px;
+    height: 36px;
+    background: linear-gradient(92.34deg, #45FFEA -24.04%, #65C6BB 50.65%, #FFFFFF 130.15%);
+    filter: blur(8.5px);
+    border-radius: 50px;
+}
+.order__button{
+    border: none;
+    color: white;
+    font-family: 'Jost', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    position: absolute;
+    z-index: 2;
+    width: 276px;
+    height: 36px;
+    background: linear-gradient(92.34deg, #45FFEA -24.04%, #65C6BB 50.65%, #FFFFFF 130.15%);
+    border-radius: 50px;
+    cursor: pointer;
+}
+.callme__btn{
+    display: block;
+    text-align: center;
+    width: 276px;
+    height: 36px;
+    margin: 0 auto;
+    margin-top: 15px;
+    background: #393939;
+    border-radius: 50px;
+    border: none;
+    color: white;
+    font-family: 'Jost', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    cursor: pointer;
+}
+.order__warning{
+    margin-top: 15px;
+    padding-bottom: 15px;
+    display: block;
+    text-align: center;
+    font-weight: 300;
+    font-size: 14px;
+    color: #848484;
+}
+.bgtext{
+    background: linear-gradient(180deg, #12BCB0 20%, #0b5c56 70%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.order__car-brand{
+    margin-top: 25px;
+    color: black;
+    font-family: 'Jost', sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+}
+.confirmation__date-text{
+    display: block;
+    text-align: center;
+    color: $default-color;
+    font-family: 'Jost', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}
